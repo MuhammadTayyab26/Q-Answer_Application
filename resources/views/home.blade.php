@@ -17,23 +17,26 @@
                     </div>
                 </div>
             @endif
-            
+
             @foreach($questions as $question)
-                <div class="class my-2">
-                    <div class="card-body">
+                <div class="container">
+                    <div class="row ">
+                    <div  class="col-md-6 card-body">
                         <p>Question ID: {{ $question->id }}</p><br>
-                        <p> {{ $question->body }} </p>
+                        <p> {{ $question->title }} </p><hr>
+                        <p> {{ $question->description }} </p><br>
 
-                        <a href="{{route('question.show', $question->id)}}" class="btn btn-dark">Show</a>    
-                        <a href="{{route('question.edit', $question->id)}}" class="btn btn-primary">Edit</a>
+                     <a href="{{route('questions.show', $question->id)}}" class="btn btn-dark">Show</a>    
+                        <a href="{{route('questions.edit', $question->id)}}" class="btn btn-primary">Edit</a>
 
-                        <form action="{{route('quedtion.destroy', $question->id)}}" method="POST">
+                        <form action="{{route('questions.destroy', $question->id)}}" method="POST">
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
 
                     </div>
+                    
                 </div>
             @endforeach
         <div class="my-4 d-flex justify-content-center"> {{$question->links}} </div>    

@@ -81,12 +81,12 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Q/Answer App
+                    Entry Test App
                 </div>
 
                 <div class="links">
-                  <a href="{{route('question.index')}}">Questions</a>
-                    <a href="{{route('question.create')}}">Create Question</a> 
+                       <a href="{{route('questions.index')}}">Questions</a>
+                    @auth <a href="{{route('questions.create')}}">Create Question</a> @endauth
                 </div>
             </div>
         </div>

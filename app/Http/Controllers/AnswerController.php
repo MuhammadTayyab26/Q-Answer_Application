@@ -24,7 +24,7 @@ class AnswerController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -35,15 +35,10 @@ class AnswerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $answer = new Answer($request->all());
+        $question->answers()->save($question);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Answer  $answer
-     * @return \Illuminate\Http\Response
-     */
     public function show(Answer $answer)
     {
         //

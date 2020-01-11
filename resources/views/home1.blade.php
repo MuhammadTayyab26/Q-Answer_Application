@@ -15,7 +15,7 @@
                     @endif
 
                     @foreach ($questions as $question)
-                        {{$question->id}}: {{$question->body}} <br>
+                        {{$question->id}}: {{$question->title}} <br>
                     @endforeach
                     
                 </div>

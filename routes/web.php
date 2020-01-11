@@ -14,4 +14,8 @@ Route::resource('answers', 'AnswerController')
         'show',
         'create',
     ]);
+
 Route::resource('votes', 'VoteController');
+
+//Route::resource('vote, 'UpVoteController');
+//Route::resource('votes', 'DownVoteController');

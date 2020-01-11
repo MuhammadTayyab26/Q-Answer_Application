@@ -31,7 +31,7 @@ class VoteController extends Controller
         // auth()->user()->questions()->save($Vote);
 
         $question =  Question::find($request->get('question_id'));
-        $question->vote_count = $question->vote_count + 1;
+        $question->vote_count = $question->vote_count - 1;
         $question->save();
        	return redirect()->back()->with('msg', 'The Message');
     }
@@ -53,8 +53,9 @@ class VoteController extends Controller
 
     public function destroy(Vote $vote)
     {
-    	$question =  Question::find($request->get('question_id'));
-        $question->vote_count = $question->vote_count - 1;
-        $question->save();
+    	//$question =  Question::find($request->get('question_id'));
+        //$question->vote_count = $question->vote_count - 1;
+        //$question->save();
+    
     }
 }

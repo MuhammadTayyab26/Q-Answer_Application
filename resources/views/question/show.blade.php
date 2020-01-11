@@ -19,7 +19,7 @@
                                 
                             </div>
                         </form>
-                        <form method="POST"  action="{{route('votes.destroy', $question->id)}}">
+                        <form method="POST"  action="{{ route('votes.store')}}">
                             @csrf
                             <input type="hidden" name="question_id" value="{{$question->id}}"></input>
                             <div class="col-md-2">
